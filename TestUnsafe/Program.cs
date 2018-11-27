@@ -11,6 +11,14 @@ namespace TestUnsafe
     {
         static unsafe void Main(string[] args)
         {
+
+        }
+
+
+
+        static unsafe void ArrayInHeap()
+        {
+
             int length = (int)10E7;
             Stopwatch timer = new Stopwatch();
             int[] test = new int[length];
@@ -38,14 +46,12 @@ namespace TestUnsafe
             }
             timer.Stop();
             Console.WriteLine(timer.ElapsedMilliseconds);
-          
+
             // pointer result twice faster
-
         }
-
         static unsafe void ArrayInStack()
         {
-
+          
             int length = (int)10E5;
             Stopwatch timer = new Stopwatch();
 
